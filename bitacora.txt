@@ -1,0 +1,7 @@
+genere toda la fase de nuevo de ruedalibre un poco de ayuda imaginativa de IA 
+cree un css para organizar tanto los diseños responsive de la pagina como para ordenar colores y fondo
+cree boton para subir a la parte de arriba y con grid organice el bloque de imagenes con el texto en medio
+cree la segunda pagina de bicicletas en las cuales integre 4 diferentes carruseles y buscando como ordenar el diseño responsive para que quedase lo mas comodo posible
+cree el formato de rutas teniendo en cuenta la tabla e integrando paso a paso tanto en la nav bar que se integrase con las otras paginas
+cree el formulario que recopila informacion de manera obligatoria y tiene un campo desplegable seleccionable y un opcional de texto
+por ultimo termine de organizar todo el css de manera un poco mas comoda y dolorosa paso a paso curioseando que podia dañar

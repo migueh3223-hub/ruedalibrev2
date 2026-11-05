@@ -1,0 +1,233 @@
+:root {
+    --primero: #360101;
+    --segundo: #000700;
+    --texto: #f0f0f0;
+    --bordes: #5e0202;
+    --fondo-panel: rgba(0, 7, 0, 0.9);
+    --sombra-panel: rgba(0, 0, 0, 0.25);
+    --texto-secundario: #d0d0d0;
+    --texto-claro: #ffffff;
+    --texto-acento: #ffb3b3;
+    --fondo-hover: rgba(94, 2, 2, 0.35);
+    --fondo-encabezado: rgba(54, 1, 1, 0.8);
+    --borde-suave: rgba(94, 2, 2, 0.75);
+    --borde-boton: #8a1717;
+    --fondo-boton-hover: #7a1010;
+    --borde-boton-hover: #a51d1d;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("../imagen/garras-animadas.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.titulo {
+    color: var(--primero);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+.bloque-rutas {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 1.2fr) 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagenesrb1,
+.imagenesrb2 {
+  width: auto;
+  height: auto;
+  
+}
+
+.bloque-rutas img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.divletrasmid {
+  text-align: center;
+}
+
+.bicicletas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.bicicleta-col {
+  min-width: 0;
+}
+
+.bicicleta-carousel {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.bicicleta-carousel img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.bicicleta-card {
+  max-width: 100%;
+  margin-inline: auto;
+  color: var(--texto-claro);
+  background-color: var(--bordes);
+  border: 1px solid var(--borde-suave);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.bicicleta-card .card-body {
+  color: var(--texto-claro);
+  background-color: var(--bordes);
+}
+
+@media (max-width: 575.98px) {
+  .bicicletas-grid {
+    gap: 0.75rem;
+  }
+
+  .bicicleta-carousel img {
+    height: 150px;
+  }
+}
+
+.rutas-page {
+  padding-bottom: 3rem;
+}
+
+.formulario-page {
+  padding-bottom: 3rem;
+}
+
+.formulario-panel {
+  max-width: 680px;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  color: var(--texto);
+  background: var(--fondo-panel);
+  border: 1px solid var(--bordes);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.25rem var(--sombra-panel);
+}
+
+.formulario-panel .form-control,
+.formulario-panel .form-select {
+  min-height: 2.75rem;
+}
+
+.formulario-opcional {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+.rutas-intro {
+  color: var(--texto);
+  text-align: center;
+  margin: 1rem auto 2rem;
+  max-width: 700px;
+}
+
+.rutas-tabla-contenedor {
+  border: 1px solid var(--bordes);
+  border-radius: 1rem;
+  background: var(--fondo-panel);
+  box-shadow: 0 0.5rem 1.25rem var(--sombra-panel);
+}
+
+.rutas-tabla {
+  min-width: 700px;
+  margin-bottom: 0;
+  color: var(--texto);
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--texto);
+  --bs-table-hover-color: var(--texto-claro);
+  --bs-table-hover-bg: var(--fondo-hover);
+}
+
+.rutas-tabla thead th {
+  color: var(--texto-acento);
+  background-color: var(--fondo-encabezado);
+  white-space: nowrap;
+}
+
+.rutas-tabla th,
+.rutas-tabla td {
+  border-color: var(--borde-suave);
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.rutas-tabla td:nth-child(5) {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.rutas-tabla td:last-child {
+  white-space: nowrap;
+}
+
+.rutas-tabla .btn-ruta,
+.formulario-panel .btn-ruta {
+  color: var(--texto-claro);
+  background-color: var(--bordes);
+  border: 1px solid var(--borde-boton);
+}
+
+.rutas-tabla .btn-ruta:hover,
+.rutas-tabla .btn-ruta:focus-visible,
+.formulario-panel .btn-ruta:hover,
+.formulario-panel .btn-ruta:focus-visible {
+  background-color: var(--fondo-boton-hover);
+  border-color: var(--borde-boton-hover);
+}
+
+/* La tabla se puede desplazar horizontalmente en pantallas estrechas. */
+@media (max-width: 575.98px) {
+  .rutas-tabla th,
+  .rutas-tabla td {
+    padding: 0.75rem;
+  }
+}
+
+
+/* En pantallas pequeñas, se apilan para que se vean mejor */
+@media (max-width: 600px) {
+  .imagenes {
+    flex-direction: column;
+  }
+
+  .imagenesrb {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bloque-rutas {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .bloque-rutas img {
+    width: min(100%, 300px);
+    margin-inline: auto;
+  }
+}
