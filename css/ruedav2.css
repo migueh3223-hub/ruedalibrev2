@@ -54,7 +54,7 @@ body {
   width: 100%;
   height: 200px;
   border-radius: 18px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .divletrasmid {
@@ -82,7 +82,8 @@ body {
   display: block;
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: rgba(0, 7, 0, 0.75);
 }
 
 .bicicleta-card {
